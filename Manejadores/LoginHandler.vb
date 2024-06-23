@@ -11,7 +11,7 @@ Public Class LoginHandler
     End Function
     'Retorna true o false dependiendo de si el proceso de inicio de sesión fue hecho exitosamente
     Public Function Login(Username As String, Password As String)
-        If (Username = "" Or Password = "") Then
+        If (Username = "" Or Username = "Usuario  " Or Password = "" Or Password = "Contraseña  ") Then
             MsgBox("Por favor, ingrese un dato", MsgBoxStyle.Information, "Información")
             Return False
         Else
@@ -39,7 +39,7 @@ Public Class LoginHandler
     End Function
     'Retorna true o false dependiendo de si el proceso de registro fue hecho exitosamente
     Public Function Register(Username As String, Password As String, ConfirmPass As String, Fullname As String)
-        If (Username = "" Or Password = "" Or Fullname = "") Then
+        If (Username = "" Or Username = "Usuario  " Or Password = "" Or Password = "Contraseña  " Or Fullname = "" Or Fullname = "Nombre completo  ") Then
             MsgBox("Por favor, ingrese un dato", MsgBoxStyle.Information, "Informacion")
         Else
             Try

@@ -44,10 +44,12 @@ Public Class Registrar
 
     Private Sub passwordTextBox_Enter(sender As Object, e As EventArgs) Handles passwordTextBox.Enter
         IntHand.PassPlaceHolder(passwordTextBox, "Contraseña  ", showPasswordCheckBox.Checked)
+        Label6.Visible = True
     End Sub
 
     Private Sub passwordTextBox_Leave(sender As Object, e As EventArgs) Handles passwordTextBox.Leave
         IntHand.PassPlaceHolder(passwordTextBox, "Contraseña  ", showPasswordCheckBox.Checked)
+        Label6.Visible = False
     End Sub
 
     Private Sub showPasswordCheckBox_CheckedChanged(sender As Object, e As EventArgs) Handles showPasswordCheckBox.CheckedChanged
@@ -57,9 +59,11 @@ Public Class Registrar
 
     Private Sub confirmPasswordTextBox_Enter(sender As Object, e As EventArgs) Handles confirmPasswordTextBox.Enter
         IntHand.PassPlaceHolder(confirmPasswordTextBox, "Confirmar Contraseña  ", showPasswordCheckBox.Checked)
+        Label6.Visible = True
     End Sub
 
     Private Sub confirmPasswordTextBox_Leave(sender As Object, e As EventArgs) Handles confirmPasswordTextBox.Leave
         IntHand.PassPlaceHolder(confirmPasswordTextBox, "Confirmar Contraseña  ", showPasswordCheckBox.Checked)
+        Label6.Visible = False
     End Sub
 End Class

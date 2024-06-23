@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Registrar
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Registrar
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Registrar))
         Me.Label3 = New System.Windows.Forms.Label()
@@ -40,16 +40,17 @@ Partial Class Registrar
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.showPasswordCheckBox = New System.Windows.Forms.CheckBox()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.ColorDialog1 = New System.Windows.Forms.ColorDialog()
         Me.usernamePanel.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel2.SuspendLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label3
@@ -77,7 +78,7 @@ Partial Class Registrar
         'acceptButton
         '
         Me.acceptButton.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.acceptButton.Location = New System.Drawing.Point(98, 324)
+        Me.acceptButton.Location = New System.Drawing.Point(98, 314)
         Me.acceptButton.Name = "acceptButton"
         Me.acceptButton.Size = New System.Drawing.Size(105, 35)
         Me.acceptButton.TabIndex = 4
@@ -139,7 +140,7 @@ Partial Class Registrar
         'cancelButton
         '
         Me.cancelButton.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.cancelButton.Location = New System.Drawing.Point(282, 324)
+        Me.cancelButton.Location = New System.Drawing.Point(282, 314)
         Me.cancelButton.Name = "cancelButton"
         Me.cancelButton.Size = New System.Drawing.Size(105, 35)
         Me.cancelButton.TabIndex = 5
@@ -177,6 +178,7 @@ Partial Class Registrar
         Me.Label6.TabIndex = 15
         Me.Label6.Text = "La contraseña debe contener: Minúsculas, Mayúsculas" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Números y Caracteres especia" &
     "les" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.Label6.Visible = False
         '
         'usernamePanel
         '
@@ -192,7 +194,7 @@ Partial Class Registrar
         '
         Me.PictureBox1.Image = Global.Farmacia_BaseDeDatos.My.Resources.Resources.user_icon
         Me.PictureBox1.InitialImage = Nothing
-        Me.PictureBox1.Location = New System.Drawing.Point(2, 23)
+        Me.PictureBox1.Location = New System.Drawing.Point(2, 19)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(30, 30)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -235,6 +237,17 @@ Partial Class Registrar
         Me.Panel2.Size = New System.Drawing.Size(470, 145)
         Me.Panel2.TabIndex = 18
         '
+        'PictureBox4
+        '
+        Me.PictureBox4.Image = Global.Farmacia_BaseDeDatos.My.Resources.Resources.password_icon
+        Me.PictureBox4.InitialImage = Global.Farmacia_BaseDeDatos.My.Resources.Resources.user_icon
+        Me.PictureBox4.Location = New System.Drawing.Point(7, 69)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(30, 30)
+        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox4.TabIndex = 16
+        Me.PictureBox4.TabStop = False
+        '
         'showPasswordCheckBox
         '
         Me.showPasswordCheckBox.AutoSize = True
@@ -257,17 +270,6 @@ Partial Class Registrar
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox3.TabIndex = 1
         Me.PictureBox3.TabStop = False
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.Image = Global.Farmacia_BaseDeDatos.My.Resources.Resources.password_icon
-        Me.PictureBox4.InitialImage = Global.Farmacia_BaseDeDatos.My.Resources.Resources.user_icon
-        Me.PictureBox4.Location = New System.Drawing.Point(7, 69)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(30, 30)
-        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.PictureBox4.TabIndex = 16
-        Me.PictureBox4.TabStop = False
         '
         'Registrar
         '
@@ -296,8 +298,8 @@ Partial Class Registrar
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel2.ResumeLayout(False)
         Me.Panel2.PerformLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -323,4 +325,5 @@ Partial Class Registrar
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents showPasswordCheckBox As CheckBox
     Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents ColorDialog1 As ColorDialog
 End Class

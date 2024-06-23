@@ -1,11 +1,9 @@
 ﻿Imports System.Drawing.Text
 Public Class Form1
+    'Sinceramente, prefiero manejar backend que frontend
+    'la interfaz sencilla, pero las funcionalidades tan pulidas como pueda
     Private LogHand As New LoginHandler
     Private IntHand As New InterfaceHandler
-    'https://coolors.co/3c493f-7e8d85-b3bfb8-f0f7f4-a2e3c4
-    'Un detalle del programa es que quise añadir los placeholders en los textboxs, y aunque pude
-    'Tienen un detalle, si el usuario escribe la misma palabra del placeholder
-    'Medio que se alborotan los textboxs... Pero yo tengo fe en que el usuario no escribirá "usuario" como su usuario... espero
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Call Conectar()
     End Sub
