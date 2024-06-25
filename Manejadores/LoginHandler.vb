@@ -42,32 +42,32 @@ Public Class LoginHandler
         If (Username = "" Or Username = "Usuario  " Or Password = "" Or Password = "Contraseña  " Or Fullname = "" Or Fullname = "Nombre completo  ") Then
             MsgBox("Por favor, ingrese un dato", MsgBoxStyle.Information, "Informacion")
         Else
-            Try
-                Dim Comando = New MySqlCommand("SELECT * FROM usuarios WHERE username = '" + Username + "';", Conex)
-                Dim Resultado = Comando.ExecuteReader
-                Resultado.Read()
-                If (Resultado.HasRows) Then
-                    MsgBox("Usuario ya registrado", MsgBoxStyle.Exclamation, "ERROR")
-                    Resultado.Close()
+            If (Not Password = ConfirmPass) Then
+                MsgBox("Contraseñas no iguales", MsgBoxStyle.Information, "ERROR")
+            Else
+                If (Not ValidPassword(Password)) Then
+                    MsgBox("Contraseña no cumple los requisitos", MsgBoxStyle.Information, "ERROR")
                 Else
-                    Resultado.Close()
-                    If (Password = ConfirmPass) Then
-                        If (ValidPassword(Password)) Then
+                    Try
+                        Dim Comando = New MySqlCommand("SELECT * FROM usuarios WHERE username = '" + Username + "';", Conex)
+                        Dim Resultado = Comando.ExecuteReader
+                        Resultado.Read()
+                        If (Resultado.HasRows) Then
+                            MsgBox("Usuario ya registrado", MsgBoxStyle.Exclamation, "ERROR")
+                            Resultado.Close()
+                        Else
+                            Resultado.Close()
                             Comando = New MySqlCommand("INSERT INTO usuarios (username,password,fullname) VALUES ('" + Username + "','" + Password + "','" + Fullname + "')", Conex)
                             Dim Busqueda = Comando.ExecuteNonQuery
                             MsgBox("Usuario registrado exitosamente", MsgBoxStyle.Information, "REGISTRADO")
                             Return True
-                        Else
-                            MsgBox("Contraseña no cumple los requisitos", MsgBoxStyle.Information, "ERROR")
                         End If
-                    Else
-                            MsgBox("Contraseñas no iguales", MsgBoxStyle.Information, "ERROR")
-                    End If
+                        Resultado.Close()
+                    Catch ex As Exception
+                        MsgBox(ex.Message, MsgBoxStyle.Critical, "ERROR")
+                    End Try
                 End If
-                Resultado.Close()
-            Catch ex As Exception
-                MsgBox(ex.Message, MsgBoxStyle.Critical, "ERROR")
-            End Try
+            End If
         End If
         Return False
     End Function
