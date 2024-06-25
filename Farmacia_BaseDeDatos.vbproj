@@ -222,6 +222,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Farmacia_icono.ico" />
+    <None Include="Resources\Farmacia_icono.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
