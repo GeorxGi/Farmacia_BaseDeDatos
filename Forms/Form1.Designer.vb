@@ -28,19 +28,19 @@ Partial Class Form1
         Me.usernameTextBox = New System.Windows.Forms.TextBox()
         Me.passwordTextBox = New System.Windows.Forms.TextBox()
         Me.usernamePanel = New System.Windows.Forms.Panel()
+        Me.usernamePictureBox = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.showPasswordButton = New System.Windows.Forms.Button()
+        Me.passwordPictureBox = New System.Windows.Forms.PictureBox()
         Me.loginButton = New System.Windows.Forms.Button()
         Me.registerIconButton = New System.Windows.Forms.Button()
         Me.loginIconButton = New System.Windows.Forms.Button()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.showPasswordButton = New System.Windows.Forms.Button()
-        Me.passwordPictureBox = New System.Windows.Forms.PictureBox()
-        Me.usernamePictureBox = New System.Windows.Forms.PictureBox()
         Me.usernamePanel.SuspendLayout()
-        Me.Panel1.SuspendLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.passwordPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.usernamePictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
+        CType(Me.passwordPictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -104,6 +104,16 @@ Partial Class Form1
         Me.usernamePanel.Size = New System.Drawing.Size(312, 49)
         Me.usernamePanel.TabIndex = 7
         '
+        'usernamePictureBox
+        '
+        Me.usernamePictureBox.Image = Global.Farmacia_BaseDeDatos.My.Resources.Resources.User
+        Me.usernamePictureBox.Location = New System.Drawing.Point(0, 5)
+        Me.usernamePictureBox.Name = "usernamePictureBox"
+        Me.usernamePictureBox.Size = New System.Drawing.Size(41, 40)
+        Me.usernamePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.usernamePictureBox.TabIndex = 1
+        Me.usernamePictureBox.TabStop = False
+        '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Transparent
@@ -114,6 +124,33 @@ Partial Class Form1
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(312, 50)
         Me.Panel1.TabIndex = 8
+        '
+        'showPasswordButton
+        '
+        Me.showPasswordButton.BackColor = System.Drawing.Color.Transparent
+        Me.showPasswordButton.BackgroundImage = Global.Farmacia_BaseDeDatos.My.Resources.Resources.HidePassword
+        Me.showPasswordButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.showPasswordButton.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.showPasswordButton.FlatAppearance.BorderSize = 0
+        Me.showPasswordButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
+        Me.showPasswordButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
+        Me.showPasswordButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.showPasswordButton.Location = New System.Drawing.Point(268, 8)
+        Me.showPasswordButton.Name = "showPasswordButton"
+        Me.showPasswordButton.Size = New System.Drawing.Size(35, 35)
+        Me.showPasswordButton.TabIndex = 10
+        Me.showPasswordButton.TabStop = False
+        Me.showPasswordButton.UseVisualStyleBackColor = False
+        '
+        'passwordPictureBox
+        '
+        Me.passwordPictureBox.Image = Global.Farmacia_BaseDeDatos.My.Resources.Resources.Password
+        Me.passwordPictureBox.Location = New System.Drawing.Point(0, 4)
+        Me.passwordPictureBox.Name = "passwordPictureBox"
+        Me.passwordPictureBox.Size = New System.Drawing.Size(41, 40)
+        Me.passwordPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.passwordPictureBox.TabIndex = 1
+        Me.passwordPictureBox.TabStop = False
         '
         'loginButton
         '
@@ -179,43 +216,6 @@ Partial Class Form1
         Me.PictureBox3.TabIndex = 9
         Me.PictureBox3.TabStop = False
         '
-        'showPasswordButton
-        '
-        Me.showPasswordButton.BackColor = System.Drawing.Color.Transparent
-        Me.showPasswordButton.BackgroundImage = Global.Farmacia_BaseDeDatos.My.Resources.Resources.HidePassword
-        Me.showPasswordButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.showPasswordButton.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.showPasswordButton.FlatAppearance.BorderSize = 0
-        Me.showPasswordButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
-        Me.showPasswordButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
-        Me.showPasswordButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.showPasswordButton.Location = New System.Drawing.Point(268, 8)
-        Me.showPasswordButton.Name = "showPasswordButton"
-        Me.showPasswordButton.Size = New System.Drawing.Size(35, 35)
-        Me.showPasswordButton.TabIndex = 10
-        Me.showPasswordButton.TabStop = False
-        Me.showPasswordButton.UseVisualStyleBackColor = False
-        '
-        'passwordPictureBox
-        '
-        Me.passwordPictureBox.Image = Global.Farmacia_BaseDeDatos.My.Resources.Resources.Password
-        Me.passwordPictureBox.Location = New System.Drawing.Point(0, 4)
-        Me.passwordPictureBox.Name = "passwordPictureBox"
-        Me.passwordPictureBox.Size = New System.Drawing.Size(41, 40)
-        Me.passwordPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.passwordPictureBox.TabIndex = 1
-        Me.passwordPictureBox.TabStop = False
-        '
-        'usernamePictureBox
-        '
-        Me.usernamePictureBox.Image = Global.Farmacia_BaseDeDatos.My.Resources.Resources.User
-        Me.usernamePictureBox.Location = New System.Drawing.Point(0, 5)
-        Me.usernamePictureBox.Name = "usernamePictureBox"
-        Me.usernamePictureBox.Size = New System.Drawing.Size(41, 40)
-        Me.usernamePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.usernamePictureBox.TabIndex = 1
-        Me.usernamePictureBox.TabStop = False
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -238,11 +238,11 @@ Partial Class Form1
         Me.Text = "Inicio sesión"
         Me.usernamePanel.ResumeLayout(False)
         Me.usernamePanel.PerformLayout()
+        CType(Me.usernamePictureBox, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.passwordPictureBox, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.usernamePictureBox, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
